@@ -27,8 +27,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-soft"
-          : "bg-transparent"
+          ? "bg-background/95 backdrop-blur-md shadow-soft text-foreground"
+          : "bg-transparent text-background"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -38,7 +38,7 @@ const Navbar = () => {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">P</span>
             </div>
-            <span className="font-bold text-lg hidden sm:block">
+            <span className="font-bold text-lg hidden sm:block text-current">
               Prineville Body & Paint
             </span>
           </a>
@@ -49,7 +49,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium text-current/70 hover:text-current transition-colors"
               >
                 {link.label}
               </a>
@@ -60,7 +60,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:541-447-8994"
-              className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-current/70 hover:text-current transition-colors"
             >
               <Phone className="w-4 h-4" />
               541-447-8994
